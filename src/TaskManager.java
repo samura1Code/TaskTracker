@@ -1,12 +1,8 @@
 import java.util.Scanner;
-/*Создать задачу
-Удалить задачу
-Посмотреть все задачи
-Выход*/
 public class TaskManager {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        TaskManager taskManager = new TaskManager();
+        Task task = new Task("", "");
         int action;
         do{
             System.out.println("Меню: ");
@@ -14,12 +10,26 @@ public class TaskManager {
             System.out.println("2. Удалить задачу");
             System.out.println("3. Посмотреть все задачи");
             System.out.println("4. Выход");
-            System.out.println("Выберите действие: ");
+            System.out.print("Выберите действие: ");
             action = sc.nextInt();
-            } while (action != 4);
 
+            switch(action){
+                case 1 :
+                    sc.nextLine();
+                    Task newTask = task.addTask(sc);
+                    break;
+                case 2 :
+                    //task.removeTask(task.name);
+                    break;
+                case 3 :
+                    //task.viewTasks();
+                    break;
+                case 4 :
+                    break;
 
+            }
 
+        } while (action != 4);
 
     }
 }
