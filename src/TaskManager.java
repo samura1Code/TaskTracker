@@ -22,7 +22,7 @@ public class TaskManager {
                     //task.removeTask(task.name);
                     break;
                 case 3 :
-                    //task.viewTasks();
+                    task.viewTasks();
                     break;
                 case 4 :
                     break;
