@@ -19,7 +19,10 @@ public class TaskManager {
                     Task newTask = task.addTask(sc);
                     break;
                 case 2 :
-                    //task.removeTask(task.name);
+                    sc.nextLine(); // Очищаем символ новой строки из входного потока
+                    System.out.println("Введите имя задачи, которую вы хотите удалить:");
+                    String nameToRemove = sc.nextLine();
+                    task.removeTask(nameToRemove);
                     break;
                 case 3 :
                     task.viewTasks();

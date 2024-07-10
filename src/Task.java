@@ -29,8 +29,7 @@ public class Task {
     }
 
     public void removeTask(String name){
-        System.out.println("Remove task");
-       // tasksMap.remove(name); удалить таску по ключу
+        tasksMap.remove(name);
     }
 
     public void viewTasks(){
