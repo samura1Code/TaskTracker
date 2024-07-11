@@ -20,7 +20,7 @@ public class Task {
     }
 
     public static Task addTask(Scanner sc) {
-        System.out.print("Введите название задачи: ");
+        System.out.print("Введите имя задачи: ");
         String name = sc.nextLine();  // Read the name of the task
         System.out.print("Введите описание задачи: ");
         String description = sc.nextLine();  // Read the description of the task
@@ -34,7 +34,7 @@ public class Task {
 
     public void viewTasks(){
         if(tasksMap.isEmpty()){
-            System.out.println("Список задач пуст");
+            System.out.println("Список задач пуст. ");
         }
         else{
             System.out.println("Список задач: ");
@@ -46,6 +46,11 @@ public class Task {
         }
 
     }
+    public void waitForKeyPress(Scanner sc) {
+        System.out.println("\nНажмите любую клавишу для перехода в меню...");
+        sc.nextLine();  // Ожидание нажатия любой клавиши
+    }
+
 
 }
 
